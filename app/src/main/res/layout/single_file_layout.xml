@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.example.waveform.utils.TitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_view"
+        />
+    <com.example.waveform.utils.BaseAudioSurfaceView
+        app:layout_constraintTop_toBottomOf="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/bsv_singleFile"
+        />
+
+    <Button
+        android:visibility="gone"
+        android:text="重新录制"
+        android:clickable="true"
+        android:layout_marginTop="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bsv_singleFile"
+        android:id="@+id/btn_singleFile"
+        android:src="@drawable/start_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:clickable="true"
+        android:layout_marginTop="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bsv_singleFile"
+        android:id="@+id/iv_singleFile"
+        android:src="@drawable/start_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</android.support.constraint.ConstraintLayout>
